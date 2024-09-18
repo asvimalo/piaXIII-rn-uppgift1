@@ -7,11 +7,10 @@ Built in React Native to train design skills using UI components and Flex
 ![Design overview](images/design-freeform.png)
 
 
-# -----------------
+# Get started
 
 Note: This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
-## Get started
 
 1. Install dependencies
 
