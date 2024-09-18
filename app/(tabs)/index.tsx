@@ -3,7 +3,7 @@ import { Image, StyleSheet, Platform , View, Text} from 'react-native';
 
 export default function HomeScreen() {
   return (
-    <View style={{backgroundColor: "cyan", flex:1}}>
+    <View style={styles.container}>
       <View style={styles.rowOne}>
         <Text style={styles.textProps}>RÖD</Text>
       </View>
@@ -26,6 +26,7 @@ export default function HomeScreen() {
 }
 
 const styles = StyleSheet.create({
+  container: {backgroundColor: "cyan", flex:1},
   textProps: {
     fontSize: 30,
     margin: 5
