@@ -1,4 +1,4 @@
-![Design overview](images/design-freeform.svg)
+![Design overview](images/design-freeform.png)
 
 # Welcome to your Expo app 👋
 
