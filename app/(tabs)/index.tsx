@@ -3,43 +3,36 @@ import { Image, StyleSheet, Platform , View, Text} from 'react-native';
 
 export default function HomeScreen() {
   return (
-    <View style={{backgroundColor: "cyan",flex:1}}>
-      <View style={{backgroundColor: "red", height:150, justifyContent: "center", alignItems: "center"}}>
-      <Text style={{fontSize: 30}}>RÖD</Text>
+    <View style={{backgroundColor: "cyan", flex:1}}>
+      <View style={styles.rowOne}>
+        <Text style={styles.textProps}>RÖD</Text>
       </View>
-      <View style={{backgroundColor: "white", height:150, flexDirection: "row"}}>
+      <View style={styles.rowTwo}>
         <View style={{backgroundColor: "green", flex:1}}>
-          <Text style={{fontSize: 30}}>GRÖN</Text>
+          <Text style={styles.textProps}>GRÖN</Text>
         </View>
         <View style={{backgroundColor: "yellow", flex:1}}></View>
       </View>
-      <View style={{backgroundColor: "white", height:80, flexDirection: "row"}}>
+      <View style={styles.rowThree}>
         <View style={{backgroundColor: "red", flex:3}}></View>
         <View style={{backgroundColor: "black", flex:1}}></View>
       </View>
-      <View style={{flex:1}}></View>
-      <View style={{ backgroundColor: "orange", height:50, alignItems: "flex-end", justifyContent: "center"}}>
-        <Text style={{fontSize: 30}}>ORANGE</Text>
+      <View style={styles.rowFour}></View>
+      <View style={styles.rowFive}>
+        <Text style={styles.textProps}>ORANGE</Text>
       </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  titleContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
+  textProps: {
+    fontSize: 30,
+    margin: 10
   },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
-  },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
-  },
+  rowOne: {backgroundColor: "red", height:150, justifyContent: "center", alignItems: "center"},
+  rowTwo: {backgroundColor: "white", height:150, flexDirection: "row"},
+  rowThree: {backgroundColor: "white", height:80, flexDirection: "row"},
+  rowFour: {flex:1},
+  rowFive: { backgroundColor: "orange", height:50, alignItems: "flex-end", justifyContent: "center"}
 });
