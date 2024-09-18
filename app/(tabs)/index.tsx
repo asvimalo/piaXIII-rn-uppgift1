@@ -28,7 +28,7 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   textProps: {
     fontSize: 30,
-    margin: 10
+    margin: 5
   },
   rowOne: {backgroundColor: "red", height:150, justifyContent: "center", alignItems: "center"},
   rowTwo: {backgroundColor: "white", height:150, flexDirection: "row"},
