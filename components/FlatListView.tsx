@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {ActivityIndicator, FlatList, Text, View} from 'react-native';
+import {ActivityIndicator, FlatList, Text, View, StyleSheet} from 'react-native';
 
 type Movie = {
   id: string;
@@ -29,7 +29,7 @@ export default function FlatListView () {
   }, []);
 
   return (
-    <View style={{flex: 1, padding: 24}}>
+    <View style={styles.listRow}>
       {isLoading ? (
         <ActivityIndicator />
       ) : (
@@ -37,12 +37,29 @@ export default function FlatListView () {
           data={data}
           keyExtractor={({id}) => id}
           renderItem={({item}) => (
-            <Text>
-              {item.title}, {item.releaseYear}
-            </Text>
+            <View>
+                <View style={{backgroundColor: "red", flex:3}}>
+                    <Text style= {styles.textProps}>
+                        {item.title}
+                    </Text>
+                </View>
+                <View style={{backgroundColor: "black", flex:1}}>
+                    <Text style= {styles.textProps}>
+                        {item.releaseYear}
+                    </Text>
+                </View>
+            </View>
           )}
         />
       )}
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+    listRow: {backgroundColor: "white", height:80, flexDirection: "row"},
+    textProps: {
+        color: "white",
+        fontSize: 20
+    }
+})
